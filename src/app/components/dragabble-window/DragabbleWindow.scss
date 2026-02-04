@@ -1,0 +1,66 @@
+.draggable-window-wrapper {
+  position: absolute;
+  width: 100%;
+  background: var(--color-bg-surface);
+  border-radius: 16px;
+  max-width: 500px;
+  max-height: 600px;
+  box-shadow: var(--shadow-window);
+  border: 2px solid var(--color-border);
+  user-select: none;
+}
+
+.draggable-window,
+.draggable-window-wrapper {
+  opacity: 0;
+  transition:
+    opacity 200ms ease-in-out;
+  will-change: opacity;
+}
+
+.draggable-window.open,
+.draggable-window-wrapper.open {
+  opacity: 1;
+  transform: 1000ms scale(1);
+}
+
+.draggable-window.closing,
+.draggable-window-wrapper.closing {
+  opacity: 0;
+  transform: 1000ms scale(0.5);
+}
+
+.draggable-header {
+  padding: 1rem;
+  background: var(--color-text-primary);
+  color: var(--color-text-on-primary);
+  border-radius: var(--round-border-md) var(--round-border-md) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: move;
+}
+
+.window-actions {
+  display: flex;
+}
+
+.ui-button span {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close {
+  background-color: red;
+  color: var(--color-text-on-accent);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.draggable-content {
+  padding: 1rem;
+  color: #1f2937;
+}

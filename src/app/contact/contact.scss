@@ -1,0 +1,29 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--color-text-on-primary);
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contact-action{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+}
+
+.mail-icon{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.hand-emoji{
+    font-size: 56px;
+}

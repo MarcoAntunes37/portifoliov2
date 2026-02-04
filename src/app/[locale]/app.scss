@@ -1,0 +1,148 @@
+@use "sass:list";
+
+$grad-colors: (
+  var(--color-bg-secondary),
+  var(--color-bg-gradient-middle),
+  var(--color-bg-accent),
+);
+
+$colors-count: list.length($grad-colors);
+
+$background-size: calc($colors-count * 2 * 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@function getGradientFromList($colors, $angle: 269deg) {
+  @return linear-gradient($angle, $colors...);
+}
+
+.main {
+  background: getGradientFromList($grad-colors);
+  background-size: $background-size, $background-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-width: 400px;
+
+  -webkit-animation: color-slide-3 19s ease infinite;
+  -moz-animation: color-slide-3 19s ease infinite;
+  animation: color-slide-3 19s ease infinite;
+}
+
+.app-container {
+  width: 80vw;
+  height: 80vh;
+  background-color: var(--color-bg-primary);
+  border-radius: 16px;
+  display: flex;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.app-title,
+.app-subtitle,
+.app-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-shadow {
+  filter: drop-shadow(var(--shadow-icon));
+}
+
+.app-title {
+  font-size: clamp(3rem, 4vw, 8rem);
+  font-weight: 600;
+  color: var(--color-text-on-primary);
+}
+
+.app-subtitle {
+  font-size: clamp(2rem, 2vw, 6rem);
+  font-weight: 500;
+  color: var(--color-text-on-primary);
+}
+
+.app-actions {
+  width: 100%;
+}
+
+.app-actions-container {
+  display: grid;
+  width: 60%;
+  gap: 1rem;
+  grid-template-areas: "AA BB CC DD";
+}
+
+@media only screen and (max-width: 770px) {
+  .app-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    border-radius: 16px;
+    display: flex;
+  }
+
+  .app-actions {
+    width: 100% !important;
+  }
+
+  .app-actions-container {
+    grid-template-areas: none !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@-webkit-keyframes color-slide-3 {
+  0% {
+    background-position: 0% 83%
+  }
+
+  50% {
+    background-position: 100% 18%
+  }
+
+  100% {
+    background-position: 0% 83%
+  }
+}
+
+@-moz-keyframes color-slide-3 {
+  0% {
+    background-position: 0% 83%
+  }
+
+  50% {
+    background-position: 100% 18%
+  }
+
+  100% {
+    background-position: 0% 83%
+  }
+}
+
+@keyframes color-slide-3 {
+  0% {
+    background-position: 0% 83%
+  }
+
+  50% {
+    background-position: 100% 18%
+  }
+
+  100% {
+    background-position: 0% 83%
+  }
+}
