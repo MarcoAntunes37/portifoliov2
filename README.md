@@ -37,7 +37,7 @@
     - Z-Axis change on window focus
     - Drag
 
-<img src="./git/assets/buttons-and-window-animations.gif">
+<img src="./readme/assets/buttons-and-window-animations.gif">
 
 <div style="display: flex; justify-content: right;width: 100%">
     <a href="#top">Back to top</a>
@@ -60,14 +60,14 @@
 </div>
 
 ##### Light theme
-<img src="./git/assets/light-mode.webp">
+<img src="./readme/assets/light-mode.webp">
 
 <div style="display: flex; justify-content: right; width: 100%">
     <a href="#top">Back to top</a>
 </div>
 
 ##### Dark theme
-<img src="./git/assets/dark-mode.webp">
+<img src="./readme/assets/dark-mode.webp">
 
 <div style="display: flex; justify-content: right; width: 100%">
     <a href="#top">Back to top</a>
@@ -76,7 +76,7 @@
 #### Responsive layout
  - Swap dragable window for bottomsheet and drop the multi window in smaller screens.
 
-<img src="./git/assets/buttons-and-window-animations-mobile.gif">
+<img src="./readme/assets/buttons-and-window-animations-mobile.gif">
 
 <div style="display: flex; justify-content: right; width: 100%">
     <a href="#top">Back to top</a>
@@ -94,7 +94,7 @@
  - Values based on viewport
  - Scss function calculate based on how many colors background will have (minimun of 3)
 
-<img src="./git/assets/calculated-background-animation.gif">
+<img src="./readme/assets/calculated-background-animation.gif">
 
 <div style="display: flex; justify-content: right; width: 100%">
     <a href="#top">Back to top</a>
