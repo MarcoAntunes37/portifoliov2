@@ -2,6 +2,7 @@ import Image from "next/image"
 import "./about.scss"
 import interpolate from "../../i18n/interpolator/interpolate";
 import { I18nDictionary } from "../../shared/type/Types";
+import Link from "next/link";
 
 function About({ dict }: { dict: I18nDictionary }) {
     return (
@@ -39,7 +40,7 @@ function About({ dict }: { dict: I18nDictionary }) {
                 <div className="contact">
                     <p>{interpolate(dict.aboutContactParagraph1, { emoji: "👇" })}</p>
                     <div className="actions-container">
-                        <a href="mailto:marcoantunesdev@gmail.com" className="secondary-button">
+                        <Link href="mailto:marcoantunesdev@gmail.com" className="secondary-button">
                             <picture>
                                 <Image
                                     src={"/assets/icons/mail.svg"}
@@ -51,7 +52,7 @@ function About({ dict }: { dict: I18nDictionary }) {
                                 />
                             </picture>
                             <span className="btn-text">{dict.aboutContactAction1}</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="education">

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { I18nDictionary } from '../../shared/type/Types';
 import './projects.scss'
 import Image from 'next/image'
@@ -64,13 +65,13 @@ function Projects({ dict }: ProjectsProps) {
                         </div>
                         <div className="project-card-actions">
                             {project.url &&
-                                <a href={project.url} target="_blank" rel="noopener noreferrer" className="">
+                                <Link href={project.url} target="_blank" rel="noopener noreferrer" className="">
                                     {dict.projectActionViewProject}
-                                </a>}
+                                </Link>}
                             {project.repoUrl &&
-                                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="">
+                                <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="">
                                     {dict.projectActionViewRepo}
-                                </a>}
+                                </Link>}
                         </div>
                     </div>
                 ))}

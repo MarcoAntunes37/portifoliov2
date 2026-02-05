@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { I18nDictionary } from "../../shared/type/Types"
 import "./contact.scss"
+import Link from "next/link"
 
 interface ContactProps {
     dict: I18nDictionary
@@ -18,8 +19,8 @@ function Contact({dict}: ContactProps) {
             </div>
             <div className="contact-action">
                 <p className="hand-emoji">👇</p>
-                <p><a href="mailto:marcoantunesdev@gmail.com">
-                    <Image src={"/assets/icons/mail.svg"} alt="" className="mail-icon" /></a></p>
+                <p><Link href="mailto:marcoantunesdev@gmail.com">
+                    <Image src={"/assets/icons/mail.svg"} alt="" className="mail-icon" /></Link></p>
             </div>
         </div>
     )
