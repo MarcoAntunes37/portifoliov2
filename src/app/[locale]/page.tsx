@@ -2,6 +2,13 @@ import { getDictionary } from "../i18n/dictionaries/dictionaries";
 import { Locale } from "../shared/type/Types";
 import App from "./app";
 
+export async function generateStaticParams() {
+    return [
+        { locale: "pt_BR" },
+        { locale: "en_US" },
+    ];
+}
+
 export default async function Page({ params }: { params: Promise<{ locale: Locale }> }) {
 
     const locale = await params.then(res => { return res.locale });
