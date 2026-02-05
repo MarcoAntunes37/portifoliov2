@@ -1,5 +1,6 @@
 
-import { I18nDictionary } from "../shared/type/Types"
+import Image from "next/image"
+import { I18nDictionary } from "../../shared/type/Types"
 import "./contact.scss"
 
 interface ContactProps {
@@ -18,7 +19,7 @@ function Contact({dict}: ContactProps) {
             <div className="contact-action">
                 <p className="hand-emoji">👇</p>
                 <p><a href="mailto:marcoantunesdev@gmail.com">
-                    <img src={"/assets/icons/mail.svg"} alt="" className="mail-icon" /></a></p>
+                    <Image src={"/assets/icons/mail.svg"} alt="" className="mail-icon" /></a></p>
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import { I18nDictionary } from '../shared/type/Types';
+import { I18nDictionary } from '../../shared/type/Types';
 import './projects.scss'
 import Image from 'next/image'
 

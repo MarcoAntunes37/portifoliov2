@@ -1,7 +1,7 @@
 import Image from "next/image"
 import "./about.scss"
-import interpolate from "../i18n/interpolator/interpolate";
-import { I18nDictionary } from "../shared/type/Types";
+import interpolate from "../../i18n/interpolator/interpolate";
+import { I18nDictionary } from "../../shared/type/Types";
 
 function About({ dict }: { dict: I18nDictionary }) {
     return (

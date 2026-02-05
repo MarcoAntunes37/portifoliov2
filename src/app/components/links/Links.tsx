@@ -1,5 +1,5 @@
-import interpolate from '../i18n/interpolator/interpolate'
-import { I18nDictionary } from '../shared/type/Types';
+import interpolate from '../../i18n/interpolator/interpolate'
+import { I18nDictionary } from '../../shared/type/Types';
 import './links.scss'
 import Image from 'next/image'
 

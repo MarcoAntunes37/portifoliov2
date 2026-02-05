@@ -14,7 +14,6 @@ interface AppProps {
 }
 
 function App({ dict, params }: AppProps) {
-
   const [openWindows, setOpenWindows] = useState<OpenWindow[]>([]);
   const isMobile = useMediaQuery("(max-width: 769px)");
 
