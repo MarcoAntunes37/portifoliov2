@@ -8,5 +8,5 @@ export interface OpenWindow {
   position: { x: number; y: number };
   zAxis: number;
   windowState: WindowVisualState;
-  setWindowState: Dispatch<SetStateAction<WindowVisualState>>
+  setWindowState: (state: WindowVisualState) => void;
 }

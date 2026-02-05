@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 
 interface WindowStateOpenProps {
-    setWindowState: Dispatch<SetStateAction<"opening" | "open" | "closing" | "closed">>;
+    setWindowState: (state: "opening" | "open" | "closing" | "closed") => void
 }
 
 function useOnWindowOpen({ setWindowState }: WindowStateOpenProps) {

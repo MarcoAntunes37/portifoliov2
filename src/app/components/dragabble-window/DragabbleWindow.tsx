@@ -10,7 +10,7 @@ interface DraggableWindowProps extends PropsWithChildren<{}> {
   initialPosition: { x: number; y: number };
   zAxis: number;
   windowState: "opening" | "open" | "closing" | "closed";
-  setWindowState: Dispatch<SetStateAction<"opening" | "open" | "closing" | "closed">>;
+  setWindowState: (state: "opening" | "open" | "closing" | "closed") => void;
   onFocus: () => void;
   requestClose: () => void;
   onClosed: (id: string) => void;

@@ -1,17 +1,17 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { Dispatch, SetStateAction, useEffect, useMemo, useRef, useState } from "react";
+import { SetStateAction, useEffect, useMemo, useRef, useState } from "react";
 
 import BottomSheet from "../bottom-sheet/BottomSheet";
 import DraggableWindow from "../dragabble-window/DragabbleWindow";
 
-import type { ContentMap, I18nDictionary, WindowType, WindowVisualState } from "../../shared/type/Types";
+import type { ContentMap, I18nDictionary, WindowType } from "../../shared/type/Types";
 
-import About from "@/app/about/page";
-import Links from "@/app/links/page";
-import Projects from "@/app/projects/page";
-import Contact from "@/app/contact/page";
+import About from "@/app/components/about/about";
+import Links from "@/app/components/links/Links";
+import Projects from "@/app/components/projects/Projects";
+import Contact from "@/app/components/contact/Contact";
 
 import { useViewportDebounced } from "@/app/hooks/viewport/useViewPortDebounced";
 import { OpenWindow } from "@/app/shared/interface/Interfaces";
@@ -19,7 +19,7 @@ import { OpenWindow } from "@/app/shared/interface/Interfaces";
 interface AdaptiveWindowProps {
     isMobile: boolean;
     openWindows: OpenWindow[];
-    setOpenWindows: Dispatch<SetStateAction<OpenWindow[]>>;
+    setOpenWindows: (state: SetStateAction<OpenWindow[]>) => void;
     i18nDictionary: I18nDictionary;
     params: Readonly<{ locale: string }>
 }
@@ -53,7 +53,9 @@ export default function AdaptiveWindow({ isMobile, openWindows, setOpenWindows, 
     }), [isMobile, width, height]);
 
     const removeWindow = (id: string) => {
-        setOpenWindows(prev => prev.filter(w => w.id !== id));
+        setOpenWindows((prev: OpenWindow[]) => {
+            return prev.filter(w => w.id !== id);
+        });
     };
 
     const closeWindow = (type: WindowType) => {

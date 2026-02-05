@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { ReactNode } from "react";
 import useOnWindowClosed from "../../hooks/window/window-closed/useOnWindowClosed";
 import useOnWindowOpen from "../../hooks/window/window-open/useOnWindowOpen";
 import "./BottomSheet.scss"
@@ -7,7 +7,7 @@ interface BottomSheetProps {
     title: string;
     requestClose: () => void;
     windowState: "opening" | "open" | "closing" | "closed";
-    setWindowState: Dispatch<SetStateAction<"opening" | "open" | "closing" | "closed">>;
+    setWindowState: (state: "opening" | "open" | "closing" | "closed") => void;
     onClosed: (id: string) => void;
     children: ReactNode;
 }
